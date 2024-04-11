@@ -1,55 +1,17 @@
-.container {
+#image-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.container .image {
-    flex: 0 0 calc(33.33% - 10px);
-    margin-bottom: 10px;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    margin-left: 2px;
-    margin-right: 2px;  
-}
-.image {
-    transition: transform 1s;
+.image-column {
+    flex: 1;
+    margin: 0 10px;
 }
 
-.image.tilt {
-    transform: perspective(500px) rotateX(5deg);
-}
-
-.modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.image-column img {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    height: auto;
+    display: block;
+    margin-top: 10px;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.modal-title {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.modal-description {
-    margin-top: 1em;
-}
-
-.modal-images {
-    float: right;
-    width: 50%;
-}
