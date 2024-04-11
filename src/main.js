@@ -14,6 +14,16 @@ document.getElementById('image-container').addEventListener('click', function(e)
         title.textContent = e.target.dataset.title;
         modalContent.appendChild(title);
 
+        // Create authors subtitle
+        var authors = document.createElement('h3');
+        authors.textContent = 'Authors: ' + e.target.dataset.authors;
+        modalContent.appendChild(authors);
+
+        // Create date subtitle
+        var date = document.createElement('h3');
+        date.textContent = 'Date: ' + e.target.dataset.date;
+        modalContent.appendChild(date);
+
         // Create description
         var description = document.createElement('p');
         description.textContent = e.target.dataset.description;
