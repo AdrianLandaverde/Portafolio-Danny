@@ -78,3 +78,23 @@ body {
     height: auto;
     margin-bottom: 10px;
 }
+
+.profile-card {
+    background-color: #FFFCF7; /* Pastel cream */
+    border: 1px solid #594A4E; /* Dark pastel purple */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin-top: 10px;
+    color: #594A4E; /* Dark pastel purple */
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-card h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.profile-card p {
+    margin: 0;
+}
