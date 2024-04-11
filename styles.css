@@ -1,6 +1,13 @@
+body {
+    background-color: #FFFCF7; /* Pastel cream */
+    font-family: 'Arial', sans-serif;
+    color: #594A4E; /* Dark pastel purple */
+}
+
 #image-container {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .image-column {
@@ -13,6 +20,7 @@
     height: auto;
     display: block;
     margin-top: 10px;
+    border-radius: 10px; /* Rounded corners for images */
 }
 
 .modal {
@@ -28,12 +36,21 @@
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #FFFCF7;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;  /* Set the width to 50% of the screen width */
-    height: 50%;  /* Set the height to 50% of the screen height */
-    max-width: 90vw;  /* Prevent the modal from going off the screen */
-    max-height: 90vh;  /* Prevent the modal from going off the screen */
-    overflow: auto;  /* Add scrollbars if the content is larger than the modal */
+    width: 50%;
+    height: 50%;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    color: #594A4E; /* Dark pastel purple */
+}
+
+.modal-content h2 {
+    color: #594A4E; /* Dark pastel purple */
+}
+
+.modal-content p {
+    color: #594A4E; /* Dark pastel purple */
 }
