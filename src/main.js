@@ -9,25 +9,43 @@ document.getElementById('image-container').addEventListener('click', function(e)
         var modalContent = document.createElement('div');
         modalContent.className = 'modal-content';
 
+        // Create text container
+        var textContainer = document.createElement('div');
+        textContainer.className = 'text-container';
+        modalContent.appendChild(textContainer);
+
         // Create title
         var title = document.createElement('h2');
         title.textContent = e.target.dataset.title;
-        modalContent.appendChild(title);
+        textContainer.appendChild(title);
 
         // Create authors subtitle
         var authors = document.createElement('h3');
         authors.textContent = 'Authors: ' + e.target.dataset.authors;
-        modalContent.appendChild(authors);
+        textContainer.appendChild(authors);
 
         // Create date subtitle
         var date = document.createElement('h3');
         date.textContent = 'Date: ' + e.target.dataset.date;
-        modalContent.appendChild(date);
+        textContainer.appendChild(date);
 
         // Create description
         var description = document.createElement('p');
         description.textContent = e.target.dataset.description;
-        modalContent.appendChild(description);
+        textContainer.appendChild(description);
+
+        // Create image container
+        var imageContainer = document.createElement('div');
+        imageContainer.className = 'image-container';
+        modalContent.appendChild(imageContainer);
+
+        // Create image carousel
+        var images = e.target.dataset.images.split(',');
+        images.forEach(function(imageSrc) {
+            var image = document.createElement('img');
+            image.src = imageSrc;
+            imageContainer.appendChild(image);
+        });
 
         // Add modal content to modal
         modal.appendChild(modalContent);

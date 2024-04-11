@@ -50,6 +50,7 @@ body {
     max-height: 90vh;
     overflow: auto;
     color: #594A4E; /* Dark pastel purple */
+    display: flex;
 }
 
 .modal-content h2 {
@@ -58,4 +59,22 @@ body {
 
 .modal-content p {
     color: #594A4E; /* Dark pastel purple */
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
