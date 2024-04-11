@@ -1,7 +1,11 @@
 body {
     background-color: #FFFCF7; /* Pastel cream */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #594A4E; /* Dark pastel purple */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 #image-container {
@@ -28,7 +32,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,15 +45,19 @@ body {
 }
 
 .modal-content {
-    background-color: #FFFCF7;
+    background-color: #f8f1f1; /* Light pink */
+    border-radius: 10px; /* Rounded corners */
+    color: #594a4e; /* Dark pastel purple */
+    font-family: 'Roboto', sans-serif;
     padding: 20px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 80%;
     height: 80%;
     max-width: 90vw;
     max-height: 90vh;
     overflow: auto;
-    color: #594A4E; /* Dark pastel purple */
     display: flex;
 }
 
@@ -66,6 +74,16 @@ body {
     padding-right: 20px;
 }
 
+.text-container h2, .text-container h3 {
+    color: #6d597a; /* Thistle */
+    font-family: 'Playfair Display'
+}
+
+.text-container p {
+    color: #bc4749; /* Dark pastel red */
+    font-size: 1.2em;
+}
+
 .image-container {
     flex: 1;
     display: flex;
@@ -77,6 +95,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .profile-card {
@@ -86,7 +105,7 @@ body {
     padding: 20px;
     margin-top: 10px;
     color: #594A4E; /* Dark pastel purple */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .profile-card h3 {
