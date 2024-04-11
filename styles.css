@@ -7,7 +7,6 @@ body {
 #image-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
 }
 
 .image-column {
@@ -33,14 +32,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1;
 }
 
 .modal-content {
     background-color: #FFFCF7;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     max-width: 90vw;
     max-height: 90vh;
     overflow: auto;

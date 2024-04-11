@@ -25,6 +25,11 @@ document.getElementById('image-container').addEventListener('click', function(e)
         // Add modal to body
         document.body.appendChild(modal);
 
+        // Add 'show' class to modal after a short delay
+        setTimeout(function() {
+            modal.classList.add('show');
+        }, 10);
+
         // Add an event listener to the modal
         modal.addEventListener('click', function(event) {
             // Check if the click was outside the modal content
