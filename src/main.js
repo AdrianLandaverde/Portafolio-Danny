@@ -21,12 +21,12 @@ document.getElementById('image-container').addEventListener('click', function(e)
 
         // Create authors subtitle
         var authors = document.createElement('h3');
-        authors.textContent = 'Authors: ' + e.target.dataset.authors;
+        authors.textContent =  e.target.dataset.authors;
         textContainer.appendChild(authors);
 
         // Create date subtitle
         var date = document.createElement('h3');
-        date.textContent = 'Date: ' + e.target.dataset.date;
+        date.textContent = e.target.dataset.date;
         textContainer.appendChild(date);
 
         // Create description

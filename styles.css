@@ -18,6 +18,16 @@ h1, h2, h3 {
     margin: 0 10px;
 }
 
+@media screen and (max-width: 768px) {
+    #image-container {
+        flex-direction: column;
+    }
+
+    .image-column {
+        margin: 10px 0;
+    }
+}
+
 .image-column img {
     width: 100%;
     height: auto;
@@ -61,6 +71,12 @@ h1, h2, h3 {
     display: flex;
 }
 
+@media screen and (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+}
+
 .modal-content h2 {
     color: #594A4E; /* Dark pastel purple */
 }
@@ -74,14 +90,21 @@ h1, h2, h3 {
     padding-right: 20px;
 }
 
-.text-container h2, .text-container h3 {
+.text-container h2 {
     color: #6d597a; /* Thistle */
-    font-family: 'Playfair Display'
+    font-family: 'Playfair Display';
+    font-size: 2em;
+}
+
+.text-container h3{
+    color: #ac9cb6; /* Thistle */
+    font-family: 'Playfair Display';
+    font-size: 1em;
 }
 
 .text-container p {
-    color: #bc4749; /* Dark pastel red */
-    font-size: 1.2em;
+    color: #594A4E; /* Dark pastel red */
+    font-size: 1.4em;
 }
 
 .image-container {
@@ -96,6 +119,13 @@ h1, h2, h3 {
     height: auto;
     margin-bottom: 10px;
     border-radius: 10px; /* Rounded corners */
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content .image-container {
+        overflow: visible;
+        max-height: none;
+    }
 }
 
 .profile-card {
