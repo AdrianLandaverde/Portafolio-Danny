@@ -1,5 +1,5 @@
 // Add an event listener to each image
-document.getElementById('image-container').addEventListener('click', function(e) {
+document.body.addEventListener('click', function(e) {
     if (e.target.tagName === 'IMG') {
         // Create modal
         var modal = document.createElement('div');
