@@ -68,3 +68,52 @@ document.getElementById('image-container').addEventListener('click', function(e)
         });
     }
 });
+
+var previousScrollTop = 0;
+var scrollTimeout;
+
+window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var windowHeight = window.innerHeight;
+    var bodyHeight = document.body.clientHeight;
+
+    // Check if the user has scrolled to the bottom of the page
+    if (scrollTop + windowHeight >= bodyHeight) {
+        // Clone the image container and append it to the body
+        var imageContainer = document.getElementById('image-container');
+        var clone = imageContainer.cloneNode(true);
+        document.body.appendChild(clone);
+    }
+
+    // Get all images
+    var images = document.querySelectorAll('.image');
+
+    // Change perspective depending on scroll direction
+    if (scrollTop > previousScrollTop) {
+        // Scrolling down
+        images.forEach(function(image) {
+            image.style.transform = 'perspective(500px) rotateX(-2deg)';
+        });
+    } else {
+        // Scrolling up
+        images.forEach(function(image) {
+            image.style.transform = 'perspective(500px) rotateX(2deg)';
+        });
+    }
+
+    // Clear previous timeout if it exists
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+    }
+
+    // Set a timeout to reset the perspective after 100ms of no scrolling
+    scrollTimeout = setTimeout(function() {
+        images.forEach(function(image) {
+            image.style.transform = 'perspective(500px) rotateX(0deg)';
+        });
+    }, 100);
+
+    // Update previous scroll position
+    previousScrollTop = scrollTop;
+});
+
